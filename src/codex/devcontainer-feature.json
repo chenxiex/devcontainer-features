@@ -1,7 +1,7 @@
 {
     "id": "codex",
     "name": "Codex CLI",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Links the OpenAI `codex` CLI and `rg` from the openai.chatgpt VS Code extension and persists `~/.codex` in a shared volume across devcontainers.",
     "documentationURL": "https://github.com/chenxiex/devcontainer-features/blob/main/src/codex/README.md",
     "licenseURL": "https://github.com/chenxiex/devcontainer-features/blob/main/LICENSE",
@@ -18,7 +18,6 @@
             "target": "/var/lib/codex"
         }
     ],
-    "onCreateCommand": "/usr/local/share/codex/on_create.sh",
     "postAttachCommand": "/usr/local/share/codex/on_create.sh",
     "customizations": {
         "vscode": {

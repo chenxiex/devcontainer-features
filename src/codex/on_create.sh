@@ -94,16 +94,10 @@ link_codex_tools() {
 ensure_state_dir "$CODEX_STATE_DIR"
 link_codex_tools
 
-if [ -L "$CODEX_HOME_LINK" ]; then
-    if [ "$(readlink "$CODEX_HOME_LINK")" = "$CODEX_STATE_DIR" ]; then
-        exit 0
+if ! [ -L "$CODEX_HOME_LINK" ] || [ "$(readlink "$CODEX_HOME_LINK")" != "$CODEX_STATE_DIR" ]; then
+    if [ -e "$CODEX_HOME_LINK" ] || [ -L "$CODEX_HOME_LINK" ]; then
+        rm -rf "$CODEX_HOME_LINK"
     fi
-    rm -f "$CODEX_HOME_LINK"
-elif [ -d "$CODEX_HOME_LINK" ]; then
-    cp -an "$CODEX_HOME_LINK/." "$CODEX_STATE_DIR/"
-    rm -rf "$CODEX_HOME_LINK"
-elif [ -e "$CODEX_HOME_LINK" ]; then
-    rm -f "$CODEX_HOME_LINK"
-fi
 
-ln --symbolic --force --no-dereference "$CODEX_STATE_DIR" "$CODEX_HOME_LINK"
+    ln --symbolic --force --no-dereference "$CODEX_STATE_DIR" "$CODEX_HOME_LINK"
+fi
