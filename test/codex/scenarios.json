@@ -1,0 +1,15 @@
+{
+    "custom_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {
+                "installZsh": false,
+                "installOhMyZsh": false,
+                "upgradePackages": false,
+                "username": "octocat"
+            },
+            "codex": {}
+        },
+        "remoteUser": "octocat"
+    }
+}
