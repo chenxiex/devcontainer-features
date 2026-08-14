@@ -1,0 +1,16 @@
+{
+    "id": "my-init",
+    "name": "My Init",
+    "version": "1.0.0",
+    "description": "Applies personal settings shared across dev containers.",
+    "licenseURL": "https://github.com/chenxiex/devcontainer-features/blob/main/LICENSE",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "http.proxy": "http://host.containers.internal:10810",
+                "http.proxySupport": "override",
+                "http.useLocalProxyConfiguration": false
+            }
+        }
+    }
+}
