@@ -3,7 +3,16 @@
 {
 	"name": "Alpine",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:alpine3.23"
+	"image": "mcr.microsoft.com/devcontainers/base:alpine3.23",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-github-actions",
+				"timonwong.shellcheck",
+				"mads-hartmann.bash-ide-vscode"
+			]
+		}
+	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
