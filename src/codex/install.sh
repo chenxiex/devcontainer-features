@@ -14,7 +14,7 @@ main() {
     install -d -m 0755 /usr/local/share/codex
     install -m 0755 "$SCRIPT_DIR/on_create.sh" /usr/local/share/codex/on_create.sh
 
-    echo "Codex CLI will be linked from the openai.chatgpt VS Code extension on container creation."
+    echo "Codex state will be persisted in a shared volume on container creation."
 }
 
 main "$@"
