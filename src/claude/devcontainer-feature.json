@@ -1,0 +1,33 @@
+{
+    "id": "claude",
+    "name": "Claude",
+    "version": "1.0.0",
+    "description": "Installs the Claude Code VS Code extension and persists `~/.claude` in a shared volume across devcontainers.",
+    "documentationURL": "https://github.com/chenxiex/devcontainer-features/blob/main/src/claude/README.md",
+    "licenseURL": "https://github.com/chenxiex/devcontainer-features/blob/main/LICENSE",
+    "keywords": [
+        "claude",
+        "claude-code",
+        "anthropic",
+        "ai",
+        "cli"
+    ],
+    "mounts": [
+        {
+            "type": "volume",
+            "source": "claude",
+            "target": "/var/lib/claude"
+        }
+    ],
+    "onCreateCommand": "/usr/local/share/claude/on_create.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "anthropic.claude-code"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
