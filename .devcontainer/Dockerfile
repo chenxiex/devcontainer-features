@@ -1,4 +1,5 @@
-FROM ghcr.io/chenxiex/devcontainer-templates/devcontainer-devops-alpine3.23:latest
+FROM ghcr.io/chenxiex/devcontainer-templates/devcontainer-devops-trixie:latest
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apk add --no-cache <your-package-list-here>
+# RUN apt-get update && apt-get install -y --no-install-recommends <your-package-list-here> \
+#     && rm -rf /var/lib/apt/lists/*
