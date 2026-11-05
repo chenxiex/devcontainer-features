@@ -15,6 +15,7 @@ jobs:
           - codex
           - claude
           - my-init
+          - antigravity
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -35,6 +36,7 @@ jobs:
         features:
           - codex
           - claude
+          - antigravity
     steps:
       - uses: actions/checkout@v4
 

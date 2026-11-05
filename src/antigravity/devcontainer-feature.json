@@ -1,0 +1,32 @@
+{
+    "id": "antigravity",
+    "name": "Antigravity",
+    "version": "1.0.0",
+    "description": "Installs the Google Antigravity VS Code extension and persists `~/.gemini` in a shared volume across devcontainers.",
+    "documentationURL": "https://github.com/chenxiex/devcontainer-features/blob/main/src/antigravity/README.md",
+    "licenseURL": "https://github.com/chenxiex/devcontainer-features/blob/main/LICENSE",
+    "keywords": [
+        "antigravity",
+        "gemini",
+        "google",
+        "ai"
+    ],
+    "mounts": [
+        {
+            "type": "volume",
+            "source": "gemini",
+            "target": "/var/lib/gemini"
+        }
+    ],
+    "onCreateCommand": "/usr/local/share/antigravity/on_create.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "google.google-antigravity"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
